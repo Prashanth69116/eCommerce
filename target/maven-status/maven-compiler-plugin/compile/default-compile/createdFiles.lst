@@ -1,0 +1,13 @@
+com\ecommerce\tutorial\ecommercebackend\repository\LocalUserDAO.class
+com\ecommerce\tutorial\ecommercebackend\service\UserService.class
+com\ecommerce\tutorial\ecommercebackend\model\LocalUser.class
+com\ecommerce\tutorial\ecommercebackend\api\model\RegistrationBody.class
+com\ecommerce\tutorial\ecommercebackend\EcommerceBackendApplication.class
+com\ecommerce\tutorial\ecommercebackend\model\Inventory.class
+com\ecommerce\tutorial\ecommercebackend\model\Product.class
+com\ecommerce\tutorial\ecommercebackend\Exception\UserAlreadyExistsException.class
+com\ecommerce\tutorial\ecommercebackend\model\WebOrdersQuantity.class
+com\ecommerce\tutorial\ecommercebackend\api\model\controller_Auth\AuthenticationController.class
+com\ecommerce\tutorial\ecommercebackend\model\WebOrder.class
+com\ecommerce\tutorial\ecommercebackend\security\WebSecurityConfig.class
+com\ecommerce\tutorial\ecommercebackend\model\Address.class
