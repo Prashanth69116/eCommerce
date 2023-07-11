@@ -3,6 +3,8 @@ package com.ecommerce.tutorial.ecommercebackend.api.model.controller_Auth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +14,7 @@ import com.ecommerce.tutorial.ecommercebackend.Exception.UserAlreadyExistsExcept
 import com.ecommerce.tutorial.ecommercebackend.api.model.LoginBody;
 import com.ecommerce.tutorial.ecommercebackend.api.model.LoginResponse;
 import com.ecommerce.tutorial.ecommercebackend.api.model.RegistrationBody;
+import com.ecommerce.tutorial.ecommercebackend.model.LocalUser;
 import com.ecommerce.tutorial.ecommercebackend.service.UserService;
 
 import jakarta.validation.Valid;
@@ -49,6 +52,10 @@ public class AuthenticationController {
 			response.setJwt(jwt);
 			return ResponseEntity.ok(response);
 		}
+	}
+	@GetMapping("/me")
+	public LocalUser getLoggedInUserProfile(@AuthenticationPrincipal LocalUser user) {
+		return user;
 	}
 	
 

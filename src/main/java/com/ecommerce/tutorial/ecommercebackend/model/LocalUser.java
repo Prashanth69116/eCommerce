@@ -3,6 +3,8 @@ package com.ecommerce.tutorial.ecommercebackend.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -24,6 +26,7 @@ public class LocalUser {
 	@Column(name ="username", nullable = false, unique = true)
 	private  String username;
 
+	@JsonIgnore
 	@Column(name ="password", nullable = false, length = 1000)
 	private String password;
 	
@@ -36,6 +39,7 @@ public class LocalUser {
 	@Column(name ="last_name", nullable = false)
 	private String lastName;
 
+	@JsonIgnore
 	@OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE, orphanRemoval = true)
 	private List<Address> addresses=new  ArrayList<>();
 	

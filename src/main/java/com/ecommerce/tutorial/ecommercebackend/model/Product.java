@@ -28,7 +28,7 @@ public class Product {
 	private String longDescription;
 	
 	@Column(name = "price",  nullable=false)
-	private Double price;
+	private float price;
 
 	
 	@OneToOne(mappedBy = "product", cascade=CascadeType.REMOVE, optional = false, orphanRemoval = true)
@@ -41,7 +41,7 @@ public class Product {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Product(Long id, String name, String shortDescription, String longDescription, Double price) {
+	public Product(Long id, String name, String shortDescription, String longDescription, float price) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -90,11 +90,11 @@ public class Product {
 		this.longDescription = longDescription;
 	}
 
-	public Double getPrice() {
+	public float getPrice() {
 		return price;
 	}
 
-	public void setPrice(Double price) {
+	public void setPrice(float price) {
 		this.price = price;
 	}
 	

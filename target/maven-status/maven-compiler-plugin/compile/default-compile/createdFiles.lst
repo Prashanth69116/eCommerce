@@ -6,8 +6,13 @@ com\ecommerce\tutorial\ecommercebackend\EcommerceBackendApplication.class
 com\ecommerce\tutorial\ecommercebackend\model\Inventory.class
 com\ecommerce\tutorial\ecommercebackend\model\Product.class
 com\ecommerce\tutorial\ecommercebackend\Exception\UserAlreadyExistsException.class
+com\ecommerce\tutorial\ecommercebackend\api\model\LoginBody.class
+com\ecommerce\tutorial\ecommercebackend\security\JWTRequestFilter.class
 com\ecommerce\tutorial\ecommercebackend\model\WebOrdersQuantity.class
 com\ecommerce\tutorial\ecommercebackend\api\model\controller_Auth\AuthenticationController.class
+com\ecommerce\tutorial\ecommercebackend\service\EncryptionService.class
 com\ecommerce\tutorial\ecommercebackend\model\WebOrder.class
+com\ecommerce\tutorial\ecommercebackend\service\JWTService.class
 com\ecommerce\tutorial\ecommercebackend\security\WebSecurityConfig.class
+com\ecommerce\tutorial\ecommercebackend\api\model\LoginResponse.class
 com\ecommerce\tutorial\ecommercebackend\model\Address.class
