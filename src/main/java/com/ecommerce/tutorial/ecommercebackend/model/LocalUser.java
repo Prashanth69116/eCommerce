@@ -12,6 +12,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OrderBy;
 import jakarta.persistence.Table;
 
 @Entity
@@ -43,7 +44,29 @@ public class LocalUser {
 	@OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE, orphanRemoval = true)
 	private List<Address> addresses=new  ArrayList<>();
 	
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+	@OrderBy("id desc")
+	private List<VerificationToken> verificationToken = new ArrayList<>();
 	
+	@Column(name = "email_verified", nullable =  false)
+	private Boolean emailVerified = false;
+	
+	public Boolean isEmailVerified() {
+		return emailVerified;
+	}
+
+	public void setEmailVerified(Boolean emailVerified) {
+		this.emailVerified = emailVerified;
+	}
+
+	public List<VerificationToken> getVerificationToken() {
+		return verificationToken;
+	}
+
+	public void setVerificationToken(List<VerificationToken> verificationToken) {
+		this.verificationToken = verificationToken;
+	}
+
 	public List<Address> getAddresses() {
 		return  addresses;
 	}
